@@ -11,23 +11,26 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Make gradlew executable
-        run: chmod +x gradlew
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.6'
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug --no-daemon
+        working-directory: android-gesture-overlay
+        run: gradle assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: GestureOverlay-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: android-gesture-overlay/app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30
