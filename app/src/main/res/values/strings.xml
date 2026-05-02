@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GestureOverlay</string>
+    <string name="accessibility_service_label">Gesture Overlay Controller</string>
+    <string name="accessibility_service_description">Executes precise swipe gestures on behalf of floating overlay buttons. Required for gesture injection across all apps.</string>
+    <string name="notification_channel_id">gesture_overlay_service</string>
+    <string name="notification_channel_name">Gesture Overlay</string>
+    <string name="notification_title">Gesture Overlay Active</string>
+    <string name="notification_text">Floating buttons are running</string>
+    <string name="btn_enable_overlay">Enable Overlay Permission</string>
+    <string name="btn_enable_accessibility">Enable Accessibility Service</string>
+    <string name="btn_start_overlay">Launch Overlay</string>
+    <string name="btn_stop_overlay">Stop Overlay</string>
+    <string name="status_overlay_ok">Overlay: Granted</string>
+    <string name="status_overlay_missing">Overlay: Not Granted</string>
+    <string name="status_accessibility_ok">Accessibility: Connected</string>
+    <string name="status_accessibility_missing">Accessibility: Disabled</string>
+</resources>
