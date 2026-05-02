@@ -13,6 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Extract Android project
+        run: tar -xzf android-gesture-overlay.tar.gz
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
